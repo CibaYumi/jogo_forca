@@ -1,4 +1,6 @@
 body{
+  margin-top: 20px;
+  height: auto;
 }
 
 header{
@@ -17,16 +19,29 @@ h1{
 }
 
 .forca{
-  margin-left: 119px;
+  margin-left: 105px;
   float: left;
   width: 300px;
 }
 
 .forca img{
   width: 100%;
+  margin-left: 50px;
 }
 
 .campos{
   float: right;
-  margin-right: 119px;
+  margin-right: 130px;
+  height: 500px;
+  width: 450px;
+  text-align: center;
+}
+
+p{
+  margin-top: 397px;
+}
+
+h2{
+  font-size: 100px;
+  margin-left: -500px;
 }
