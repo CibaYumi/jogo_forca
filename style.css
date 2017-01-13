@@ -1,11 +1,9 @@
 body{
-  margin-top: 20px;
   height: auto;
 }
 
 header{
   text-align: center;
-  padding-top: 20px;
 }
 
 h1{
@@ -29,8 +27,8 @@ h1{
 }
 
 .forca img{
-  width: 100%;
-  margin-left: 50px;
+  width: 200px;
+  margin-left: 80px;
 }
 
 .campos{
@@ -42,7 +40,7 @@ h1{
 }
 
 p{
-  margin-top: 397px;
+  margin-top: 214px;
 }
 
 h2{
