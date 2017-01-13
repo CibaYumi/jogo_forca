@@ -1,0 +1,32 @@
+body{
+}
+
+header{
+  text-align: center;
+  padding-top: 20px;
+}
+
+h1{
+  font-size: 60px;
+  font-family: 'Lemonada', cursive;
+  font-weight: bold;
+}
+
+.jogo{
+  height: 500px;
+}
+
+.forca{
+  margin-left: 119px;
+  float: left;
+  width: 300px;
+}
+
+.forca img{
+  width: 100%;
+}
+
+.campos{
+  float: right;
+  margin-right: 119px;
+}
