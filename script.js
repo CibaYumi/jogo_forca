@@ -11,9 +11,11 @@ var letrasCertas = [];
 var letraErrada = [];
 
 
-var forca = function(letraUser) {
-  var letraUser = document.getElementById('validar');
+function forca(letraUser) {
 
+  var letraUser = document.getElementById('validar').value;
+
+  console.log("Jeronimo: " + letraUser);
   if (palavraSorteada.indexOf(letraUser)>= 0 ) {
     for(var i=0 ; i < palavraSorteada.length ; i++){
         var letra = palavraSorteada.charAt(i);
@@ -25,8 +27,7 @@ var forca = function(letraUser) {
       letraErrada.push(letraUser);
   }
 
-  document.getElementById('jeronimo').innerHTML(letrasCertas.toString());
-
+  document.getElementById("jeronimo").innerHTML = letrasCertas.toString();
 
 
   console.log("Entrada user: " + letraUser);
