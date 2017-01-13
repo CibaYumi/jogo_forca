@@ -12,7 +12,7 @@ var letraErrada = [];
 
 
 var forca = function(letraUser) {
-  var letraUser = document.getElementById('id1');
+  var letraUser = document.getElementById('validar');
 
   if (palavraSorteada.indexOf(letraUser)>= 0 ) {
     for(var i=0 ; i < palavraSorteada.length ; i++){
@@ -25,7 +25,7 @@ var forca = function(letraUser) {
       letraErrada.push(letraUser);
   }
 
-  document.getElementById('id').innerHTML(letrasCertas.toString());
+  document.getElementById('jeronimo').innerHTML(letrasCertas.toString());
 
 
 
