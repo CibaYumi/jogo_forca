@@ -28,6 +28,8 @@ function forca(letraUser) {
   }
 
   document.getElementById("jeronimo").innerHTML = letrasCertas.toString();
+  document.getElementById("sizeWord").innerHTML = "Tamanho da Palavra: " + palavraSorteada.length;
+  document.getElementById("erros").innerHTML = "Erros: " + letraErrada.toString();
 
 
   console.log("Entrada user: " + letraUser);
