@@ -11,18 +11,23 @@ var letrasCertas = [];
 var letraErrada = [];
 
 
-function forca(letraUser) {
+var forca = function(letraUser) {
+  var letraUser = document.getElementById('id1');
 
-    if (palavraSorteada.indexOf(letraUser)>= 0 ) {
-      for(var i=0 ; i < palavraSorteada.length ; i++){
-          var letra = palavraSorteada.charAt(i);
-          if (letraUser === letra) {
-              letrasCertas[i] = letraUser;
-          }
-      }
-    } else {
-        letraErrada.push(letraUser);
+  if (palavraSorteada.indexOf(letraUser)>= 0 ) {
+    for(var i=0 ; i < palavraSorteada.length ; i++){
+        var letra = palavraSorteada.charAt(i);
+        if (letraUser === letra) {
+            letrasCertas[i] = letraUser;
+        }
     }
+  } else {
+      letraErrada.push(letraUser);
+  }
+
+  document.getElementById('id').innerHTML(letrasCertas.toString());
+
+
 
   console.log("Entrada user: " + letraUser);
   console.log("certas " + letrasCertas.toString());
