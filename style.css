@@ -1,49 +1,49 @@
-body{
-  height: auto;
+body {
+    height: auto;
 }
 
-header{
-  text-align: center;
+header {
+    text-align: center;
 }
 
-h1{
-  font-size: 60px;
-  font-family: 'Lemonada', cursive;
-  font-weight: bold;
+h1 {
+    font-size: 60px;
+    font-family: 'Lemonada', cursive;
+    font-weight: bold;
 }
 
-.user{
-  text-align: center;
+.user {
+    text-align: center;
 }
 
-.jogo{
-  height: 500px;
+.jogo {
+    height: 500px;
 }
 
-.forca{
-  margin-left: 105px;
-  float: left;
-  width: 300px;
+.forca {
+    margin-left: 105px;
+    float: left;
+    width: 300px;
 }
 
-.forca img{
-  width: 200px;
-  margin-left: 80px;
+.forca img {
+    width: 200px;
+    margin-left: 80px;
 }
 
-.campos{
-  float: right;
-  margin-right: 130px;
-  height: 500px;
-  width: 450px;
-  text-align: center;
+.campos {
+    float: right;
+    margin-right: 130px;
+    height: 500px;
+    width: 450px;
+    text-align: center;
 }
 
-p{
-  margin-top: 214px;
+p {
+    margin-top: 214px;
 }
 
-h2{
-  font-size: 100px;
-  margin-left: -500px;
+h2 {
+    font-size: 100px;
+    margin-left: -500px;
 }
