@@ -1,41 +1,60 @@
 var forca = {
+  words:["casa", "arvore", "problema", "palavra", "paralelepipedo", "caderno", "caneta", "notebook", "chinelo", "jeronimo"],
+  palavraSorteada:"",
+  statusSorteio:false,
+  letrasCertas:[],
+  letraErrada:[],
+  screenOut:"",
 
-}
+  sorteio:function() {
+      var machineOption = Math.floor((Math.random() * this.words.length));
+      console.log("Palavra sorteada: " + this.words[machineOption]);
+      console.log("Palavra sorteada: " + machineOption);
+      this.palavraSorteada = this.words[machineOption];
+      this.statusSorteio = true;
+  }, //end sorteio method
 
-var words = ["casa", "arvore", "problema", "palavra", "paralelepipedo", "caderno", "caneta", "notebook", "chinelo", "jeronimo"];
+  init:function(){
+    if (this.statusSorteio === false) {
+      this.sorteio();
 
-var sorteio = function() {
-    var machineOption = Math.floor((Math.random() * words.length)+1);
-    console.log("Palavra sorteada: " + words[machineOption]);
-    return words[machineOption];
-}
+      for(var i=0 ; i<this.palavraSorteada.length ; i++){
+        this.screenOut += " _ ";
+        this.letrasCertas[i] = " _ ";
+      }
 
-var palavraSorteada = sorteio();
-var letrasCertas = [];
-var letraErrada = [];
+      document.getElementById("jeronimo").innerHTML = this.screenOut;
+      this.screenOut = "";
+      document.getElementById("sizeWord").innerHTML = "Tamanho da Palavra: " + this.palavraSorteada.length;
+      document.getElementById("erros").innerHTML = "Erros: " + this.letraErrada.toString();
+    }
+  }, //end init method
 
-
-var forca = function(letraUser) {
-
+  jogar:function() {
     var letraUser = document.getElementById('validar').value;
-
-    console.log("Jeronimo: " + letraUser);
-    if (palavraSorteada.indexOf(letraUser) >= 0) {
-        for (var i = 0; i < palavraSorteada.length; i++) {
-            var letra = palavraSorteada.charAt(i);
-            if (letraUser === letra) {
-                letrasCertas[i] = letraUser;
-            }
+    if (this.palavraSorteada.indexOf(letraUser) >= 0) {
+      for (var i = 0; i < this.palavraSorteada.length; i++) {
+          var letra = this.palavraSorteada.charAt(i);
+          if (letraUser === letra) {
+            this.letrasCertas[i] = letraUser;
+          }
+      }
+      for(var i=0 ; i<this.palavraSorteada.length ; i++){
+        if (this.letrasCertas[i] === " _ ") {
+          this.screenOut += (" _ ");
+        }else {
+          this.screenOut += " " + this.letrasCertas[i] + " ";
         }
+      }
+      document.getElementById("jeronimo").innerHTML = this.screenOut;
+
     } else {
-        letraErrada.push(letraUser);
+        this.letraErrada.push(letraUser);
     }
 
-  document.getElementById("jeronimo").innerHTML = letrasCertas.toString();
-  document.getElementById("sizeWord").innerHTML = "Tamanho da Palavra: " + palavraSorteada.length;
-  document.getElementById("erros").innerHTML = "Erros: " + letraErrada.toString();
+    this.screenOut = "";
+    document.getElementById('validar').value = "";
+    document.getElementById("erros").innerHTML = "Erros: " + this.letraErrada.toString();
+  } //end jogar method
 
-    console.log("Entrada user: " + letraUser);
-    console.log("certas " + letrasCertas.toString());
-    console.log("Erradas " + letraErrada.toString());
-}
+} //end forca object

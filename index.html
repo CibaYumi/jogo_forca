@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Baloo+Thambi|Caveat|Indie+Flower|Lemonada|Nunito|Open+Sans+Condensed:300" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" charset="utf-8"></script>
+    <script defer src="script.js" charset="utf-8"></script>
 
 </head>
 
@@ -25,9 +25,11 @@
         <div class="row">
             <div class="form-group col-sm-4 col-sm-offset-4">
                 <div id class="user">
+
+                  <button class="btn btn-success" onclick="forca.init()">Iniciar</button><br><br><br><br>
                     <h3>Escolha uma letra:</h3><br>
                     <input id="validar" type="text" name="" value=""><br><br>
-                    <button onclick="forca()" class="btn btn-primary">Enviar</button><br>
+                    <button onclick="forca.jogar()" class="btn btn-primary">Enviar</button><br>
                 </div>
             </div>
         </div>
@@ -39,7 +41,7 @@
         </div>
 
       <div class="campos">
-        <h2 id="jeronimo">___________</h2>
+        <h2 id="jeronimo">_ _ _ _ _ _</h2>
         <br><br>
         <h3 id="sizeWord"></h3>
         <br><br>
@@ -47,7 +49,6 @@
       </div>
 
     </div>
-
 
 </body>
 
