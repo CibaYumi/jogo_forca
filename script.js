@@ -1,7 +1,11 @@
+var forca = {
+
+}
+
 var words = ["casa", "arvore", "problema", "palavra", "paralelepipedo", "caderno", "caneta", "notebook", "chinelo", "jeronimo"];
 
 var sorteio = function() {
-    var machineOption = Math.floor((Math.random() * words.length));
+    var machineOption = Math.floor((Math.random() * words.length)+1);
     console.log("Palavra sorteada: " + words[machineOption]);
     return words[machineOption];
 }
@@ -11,7 +15,7 @@ var letrasCertas = [];
 var letraErrada = [];
 
 
-function forca(letraUser) {
+var forca = function(letraUser) {
 
     var letraUser = document.getElementById('validar').value;
 
@@ -27,14 +31,9 @@ function forca(letraUser) {
         letraErrada.push(letraUser);
     }
 
-<<<<<<< HEAD
   document.getElementById("jeronimo").innerHTML = letrasCertas.toString();
   document.getElementById("sizeWord").innerHTML = "Tamanho da Palavra: " + palavraSorteada.length;
   document.getElementById("erros").innerHTML = "Erros: " + letraErrada.toString();
-=======
-    document.getElementById("jeronimo").innerHTML = letrasCertas.toString();
->>>>>>> 6b8d5f3e1f52e281f750ab345ba7dd7f4eda1808
-
 
     console.log("Entrada user: " + letraUser);
     console.log("certas " + letrasCertas.toString());
